@@ -5,11 +5,9 @@ import { Provider } from 'react-redux';
 import ReduxThunk from 'redux-thunk';
 import reducers from './reducers/reducers.js';
 import Routes from './router';
-import { searchArtists, loadInitialData } from './actions/actions.js';
+import store from './store';
 
 const App = () => {
-  const store = createStore(reducers, {}, applyMiddleware(ReduxThunk));
-
   return (
     <Provider store={store}>
       <Routes />

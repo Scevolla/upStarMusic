@@ -1,13 +1,15 @@
-import React from 'react';
+import React, { Component } from 'react';
 import Header from './Header';
 
-const Home = ({ children }) => {
-  return (
-    <div className="container">
-      <Header />
-      {children}
-    </div>
-  );
+class Home extends Component {
+  render() {
+    return (
+      <div className="container">
+        <Header router={this.props.router}/>
+        {this.props.children}
+      </div>
+    );
+  }
 };
 
 export default Home;
