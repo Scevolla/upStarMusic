@@ -20,7 +20,7 @@ import {
 
 import GetFilterRanges from '../../database/queries/GetFilterRanges';
 import SearchArtists from '../../database/queries/SearchArtists';
-// import FindArtist from '../../database/queries/FindArtist';
+import FindArtist from '../../database/queries/FindArtist';
 // import CreateArtist from '../../database/queries/CreateArtist';
 // import EditArtist from '../../database/queries/EditArtist';
 // import DeleteArtist from '../../database/queries/DeleteArtist';
@@ -35,9 +35,9 @@ export const filterChanged = (values) => {
   return { type: FILTER_CHANGED, payload: values };
 };
 
-// export const resetArtist = () => {
-//   return { type: RESET_ARTIST };
-// };
+export const resetArtist = () => {
+  return { type: RESET_ARTIST };
+};
 
 // export const clearError = () => {
 //   return { type: CLEAR_ERROR };
@@ -81,11 +81,11 @@ export const searchArtists = (oFilters) => dispatch =>
       dispatch({ type: SEARCH_ARTISTS, payload: result })
     );
 
-// export const findArtist = id => dispatch =>
-//   FindArtistProxy(id)
-//     .then(artist =>
-//       dispatch({ type: FIND_ARTIST, payload: artist })
-//     );
+export const findArtist = id => dispatch =>
+  FindArtistProxy(id)
+    .then(artist =>
+      dispatch({ type: FIND_ARTIST, payload: artist })
+    );
 
 // export const createArtist = props => dispatch =>
 //   CreateArtistProxy(props)
@@ -117,22 +117,6 @@ export const searchArtists = (oFilters) => dispatch =>
 //
 // Faux Proxies
 
-// const GetAgeRangeProxy = (...args) => {
-//   const result = GetAgeRange(...args);
-//   if (!result || !result.then) {
-//     return new Promise(() => {});
-//   }
-//   return result;
-// };
-
-// const GetYearsActiveRangeProxy = (...args) => {
-//   const result = GetYearsActiveRange(...args);
-//   if (!result || !result.then) {
-//     return new Promise(() => {});
-//   }
-//   return result;
-// };
-
 const GetFilterRangesProxy = () => {
   const result = GetFilterRanges();
   if (!result || !result.then) {
@@ -149,13 +133,13 @@ const SearchArtistsProxy = (oFilters) => {
   return result;
 };
 
-// const FindArtistProxy = (...args) => {
-//   const result = FindArtist(...args);
-//   if (!result || !result.then) {
-//     return new Promise(() => {});
-//   }
-//   return result;
-// };
+const FindArtistProxy = (id) => {
+  const result = FindArtist(id);
+  if (!result || !result.then) {
+    return new Promise(() => {});
+  }
+  return result;
+};
 
 // const CreateArtistProxy = (...args) => {
 //   const result = CreateArtist(...args);
