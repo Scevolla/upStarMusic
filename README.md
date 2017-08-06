@@ -1,0 +1,3 @@
+# UpStarMusic
+
+React + Redux application
