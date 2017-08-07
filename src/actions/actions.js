@@ -1,4 +1,4 @@
-// import { hashHistory } from 'react-router';
+import { hashHistory } from 'react-router';
 import { maxPropOfArray, minPropOfArray } from '../../helpers/utils.js';
 import {
   FILTER_CHANGED,
@@ -21,7 +21,7 @@ import {
 import GetFilterRanges from '../../database/queries/GetFilterRanges';
 import SearchArtists from '../../database/queries/SearchArtists';
 import FindArtist from '../../database/queries/FindArtist';
-// import CreateArtist from '../../database/queries/CreateArtist';
+import CreateArtist from '../../database/queries/CreateArtist';
 // import EditArtist from '../../database/queries/EditArtist';
 // import DeleteArtist from '../../database/queries/DeleteArtist';
 // import SetRetired from '../../database/queries/SetRetired';
@@ -87,15 +87,15 @@ export const findArtist = id => dispatch =>
       dispatch({ type: FIND_ARTIST, payload: artist })
     );
 
-// export const createArtist = props => dispatch =>
-//   CreateArtistProxy(props)
-//     .then(artist => {
-//       hashHistory.push(`artists/${artist._id}`);
-//     })
-//     .catch(error => {
-//       console.log(error);
-//       dispatch({ type: CREATE_ERROR, payload: error });
-//     });
+export const createArtist = props => dispatch =>
+  CreateArtistProxy(props)
+    .then(artist => {
+      hashHistory.push(`artists/${artist._id}`);
+    })
+    .catch(error => {
+      console.log(error);
+      dispatch({ type: CREATE_ERROR, payload: error });
+    });
 
 // export const editArtist = (id, props) => dispatch =>
 //   EditArtistProxy(id, props)
@@ -141,13 +141,13 @@ const FindArtistProxy = (id) => {
   return result;
 };
 
-// const CreateArtistProxy = (...args) => {
-//   const result = CreateArtist(...args);
-//   if (!result || !result.then) {
-//     return new Promise(() => {});
-//   }
-//   return result;
-// };
+const CreateArtistProxy = (...args) => {
+  const result = CreateArtist(...args);
+  if (!result || !result.then) {
+    return new Promise(() => {});
+  }
+  return result;
+};
 
 // const EditArtistProxy = (...args) => {
 //   const result = EditArtist(...args);
