@@ -22,8 +22,8 @@ import GetFilterRanges from '../../database/queries/GetFilterRanges';
 import SearchArtists from '../../database/queries/SearchArtists';
 import FindArtist from '../../database/queries/FindArtist';
 import CreateArtist from '../../database/queries/CreateArtist';
-// import EditArtist from '../../database/queries/EditArtist';
-// import DeleteArtist from '../../database/queries/DeleteArtist';
+import EditArtist from '../../database/queries/EditArtist';
+import DeleteArtist from '../../database/queries/DeleteArtist';
 // import SetRetired from '../../database/queries/SetRetired';
 // import SetNotRetired from '../../database/queries/SetNotRetired';
 
@@ -81,13 +81,13 @@ export const searchArtists = (oFilters) => dispatch =>
       dispatch({ type: SEARCH_ARTISTS, payload: result })
     );
 
-export const findArtist = id => dispatch =>
+export const findArtist = (id) => dispatch =>
   FindArtistProxy(id)
     .then(artist =>
       dispatch({ type: FIND_ARTIST, payload: artist })
     );
 
-export const createArtist = props => dispatch =>
+export const createArtist = (props) => dispatch =>
   CreateArtistProxy(props)
     .then(artist => {
       hashHistory.push(`artists/${artist._id}`);
@@ -97,21 +97,21 @@ export const createArtist = props => dispatch =>
       dispatch({ type: CREATE_ERROR, payload: error });
     });
 
-// export const editArtist = (id, props) => dispatch =>
-//   EditArtistProxy(id, props)
-//     .then(() => hashHistory.push(`artists/${id}`))
-//     .catch(error => {
-//       console.log(error);
-//       dispatch({ type: CREATE_ERROR, payload: error });
-//     });
+export const editArtist = (id, props) => dispatch =>
+  EditArtistProxy(id, props)
+    .then(() => hashHistory.push(`artists/${id}`))
+    .catch(error => {
+      console.log(error);
+      dispatch({ type: CREATE_ERROR, payload: error });
+    });
 
-// export const deleteArtist = (id) => dispatch =>
-//   DeleteArtistProxy(id)
-//     .then(() => hashHistory.push('/'))
-//     .catch(error => {
-//       console.log(error);
-//       dispatch({ type: CREATE_ERROR, payload: error });
-//     });
+export const deleteArtist = (id) => dispatch =>
+  DeleteArtistProxy(id)
+    .then(() => hashHistory.push('/'))
+    .catch(error => {
+      console.log(error);
+      dispatch({ type: CREATE_ERROR, payload: error });
+    });
 
 
 //
@@ -149,21 +149,21 @@ const CreateArtistProxy = (...args) => {
   return result;
 };
 
-// const EditArtistProxy = (...args) => {
-//   const result = EditArtist(...args);
-//   if (!result || !result.then) {
-//     return new Promise(() => {});
-//   }
-//   return result;
-// };
+const EditArtistProxy = (...args) => {
+  const result = EditArtist(...args);
+  if (!result || !result.then) {
+    return new Promise(() => {});
+  }
+  return result;
+};
 
-// const DeleteArtistProxy = (...args) => {
-//   const result = DeleteArtist(...args);
-//   if (!result || !result.then) {
-//     return new Promise(() => {});
-//   }
-//   return result;
-// };
+const DeleteArtistProxy = (...args) => {
+  const result = DeleteArtist(...args);
+  if (!result || !result.then) {
+    return new Promise(() => {});
+  }
+  return result;
+};
 
 // const SetRetiredProxy = (_ids) => {
 //   const result = SetRetired(_ids);

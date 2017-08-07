@@ -19,8 +19,7 @@ class ArtistDetail extends Component {
   }
 
   onDeleteClick() {
-    console.log(this.props);
-    //this.props.deleteArtist(this.props.params.id);
+    this.props.deleteArtist(this.props.params.id);
   }
 
   renderAlbums() {
