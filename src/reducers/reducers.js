@@ -3,7 +3,7 @@ import { combineReducers } from 'redux';
 //import { reducer as formReducer } from 'redux-form';
 import filterFormReducer from './FilterFormReducer';
 import artistsReducer from './ArtistsReducer';
-//import ErrorReducer from './ErrorReducer';
+import ErrorReducer from './ErrorReducer';
 import SelectionReducer from './SelectionReducer';
 
 export default combineReducers({
@@ -11,6 +11,6 @@ export default combineReducers({
   //form: formReducer,
   filterForm: filterFormReducer,
   artists: artistsReducer,
-  //errors: ErrorReducer,
+  errorMessage: ErrorReducer,
   selection: SelectionReducer
 });

@@ -1,4 +1,4 @@
-//import { hashHistory } from 'react-router';
+// import { hashHistory } from 'react-router';
 import { maxPropOfArray, minPropOfArray } from '../../helpers/utils.js';
 import {
   FILTER_CHANGED,
@@ -39,9 +39,9 @@ export const resetArtist = () => {
   return { type: RESET_ARTIST };
 };
 
-// export const clearError = () => {
-//   return { type: CLEAR_ERROR };
-// };
+export const clearError = () => {
+  return { type: CLEAR_ERROR };
+};
 
 export const selectArtist = id => {
   return { type: SELECT_ARTIST, payload: id };
