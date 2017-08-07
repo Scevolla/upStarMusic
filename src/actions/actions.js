@@ -24,8 +24,7 @@ import FindArtist from '../../database/queries/FindArtist';
 import CreateArtist from '../../database/queries/CreateArtist';
 import EditArtist from '../../database/queries/EditArtist';
 import DeleteArtist from '../../database/queries/DeleteArtist';
-// import SetRetired from '../../database/queries/SetRetired';
-// import SetNotRetired from '../../database/queries/SetNotRetired';
+import ChangeRetired from '../../database/queries/ChangeRetired';
 
 export const loadInitialData = () => {
   return searchArtists();
@@ -59,15 +58,9 @@ export const showArtistsPrevPage = () => {
   return { type: ARTISTS_PREV_PAGE };
 };
 
-// export const setRetired = ids => (dispatch, getState) =>
-//   SetRetiredProxy(ids.map(id => id.toString()))
-//     .then(() => dispatch({ type: RESET_SELECTION }))
-//     .then(() => refreshSearch(dispatch, getState));
-
-// export const setNotRetired = ids => (dispatch, getState) =>
-//   SetNotRetiredProxy(ids.map(id => id.toString()))
-//     .then(() => dispatch({ type: RESET_SELECTION }))
-//     .then(() => refreshSearch(dispatch, getState));
+export const changeRetired = (aIDs, bSetRetired) => (dispatch, getState) =>
+  ChangeRetiredProxy(aIDs, bSetRetired)
+    .then(() => dispatch({ type: RESET_SELECTION }));
 
 export const setFilterRanges = () => dispatch =>
   GetFilterRangesProxy()
@@ -165,28 +158,10 @@ const DeleteArtistProxy = (...args) => {
   return result;
 };
 
-// const SetRetiredProxy = (_ids) => {
-//   const result = SetRetired(_ids);
-//   if (!result || !result.then) {
-//     return new Promise(() => {});
-//   }
-//   return result;
-// };
-
-// const SetNotRetiredProxy = (_ids) => {
-//   const result = SetNotRetired(_ids);
-//   if (!result || !result.then) {
-//     return new Promise(() => {});
-//   }
-//   return result;
-// };
-
-//
-// Helpers
-
-// const refreshSearch = (dispatch, getState) => {
-//   const { artists: { offset, limit } } = getState();
-//   const criteria = getState().form.filters.values;
-
-//   dispatch(searchArtists(_.extend({}, { name: '' }, criteria), offset, limit));
-// };
+const ChangeRetiredProxy = (aIDs, bSetRetired) => {
+  const result = ChangeRetired(aIDs, bSetRetired);
+  if (!result || !result.then) {
+    return new Promise(() => {});
+  }
+  return result;
+};
