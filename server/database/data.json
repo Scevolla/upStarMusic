@@ -1,0 +1,1082 @@
+[
+  {
+    "_id": 0,
+    "name": "Mona Fritsch",
+    "age": 22,
+    "yearsActive": 10,
+    "image": "https://s3.amazonaws.com/uifaces/faces/twitter/edkf/128.jpg",
+    "genre": "Noise Pop",
+    "website": "https://margarett.info",
+    "netWorth": 4583524,
+    "labelName": "Skiles - Altenwerth",
+    "retired": true,
+    "albums": [
+      {
+        "title": "WEB SERVICES",
+        "date": "2017-01-28T09:54:56.081Z",
+        "copiesSold": 118838,
+        "numberTracks": 14,
+        "image": "http://lorempixel.com/640/480/transport",
+        "revenue": 1543705.62
+      }
+    ]
+  },
+  {
+    "_id": 1,
+    "name": "Manley Runolfsdottir",
+    "age": 39,
+    "yearsActive": 7,
+    "image": "https://s3.amazonaws.com/uifaces/faces/twitter/andrewofficer/128.jpg",
+    "genre": "Freak Folk",
+    "website": "https://maybelle.biz",
+    "netWorth": 781758,
+    "labelName": "Wuckert, Rath and Klocko",
+    "retired": true,
+    "albums": []
+  },
+  {
+    "_id": 2,
+    "name": "Haley DuBuque IV",
+    "age": 23,
+    "yearsActive": 9,
+    "image": "https://s3.amazonaws.com/uifaces/faces/twitter/soyjavi/128.jpg",
+    "genre": "Serialism",
+    "website": "https://gust.biz",
+    "netWorth": 3550644,
+    "labelName": "Kreiger, Ritchie and Brakus",
+    "retired": false,
+    "albums": [
+      {
+        "title": "GENERATE FRESH WOODEN",
+        "date": "2017-07-18T11:26:56.800Z",
+        "copiesSold": 422138,
+        "numberTracks": 7,
+        "image": "http://lorempixel.com/640/480/people",
+        "revenue": 5483572.62
+      },
+      {
+        "title": "DRIVES",
+        "date": "2017-07-05T19:00:51.715Z",
+        "copiesSold": 422138,
+        "numberTracks": 3,
+        "image": "http://lorempixel.com/640/480/city",
+        "revenue": 5483572.62
+      },
+      {
+        "title": "SAINT KITTS AND NEVIS",
+        "date": "2016-10-31T06:31:25.994Z",
+        "copiesSold": 422138,
+        "numberTracks": 2,
+        "image": "http://lorempixel.com/640/480/nightlife",
+        "revenue": 5483572.62
+      },
+      {
+        "title": "GREY",
+        "date": "2017-07-05T14:07:16.901Z",
+        "copiesSold": 422138,
+        "numberTracks": 15,
+        "image": "https://s3.amazonaws.com/uifaces/faces/twitter/ahmetalpbalkan/128.jpg",
+        "revenue": 5483572.62
+      }
+    ]
+  },
+  {
+    "_id": 3,
+    "name": "Mr. Braden Windler",
+    "age": 27,
+    "yearsActive": 3,
+    "image": "https://s3.amazonaws.com/uifaces/faces/twitter/wtrsld/128.jpg",
+    "genre": "Acceptable Emo",
+    "website": "https://loma.com",
+    "netWorth": 1633576,
+    "labelName": "Padberg, Marquardt and Moore",
+    "retired": true,
+    "albums": [
+      {
+        "title": "INSTALLATION SAINT HELENA POUND",
+        "date": "2017-06-04T19:11:44.856Z",
+        "copiesSold": 833384,
+        "numberTracks": 17,
+        "image": "http://lorempixel.com/640/480/people",
+        "revenue": 10825658.16
+      },
+      {
+        "title": "TOYS BORDERS SENSOR",
+        "date": "2017-05-29T07:27:39.302Z",
+        "copiesSold": 833384,
+        "numberTracks": 2,
+        "image": "http://lorempixel.com/640/480/nightlife",
+        "revenue": 10825658.16
+      }
+    ]
+  },
+  {
+    "_id": 4,
+    "name": "Haley Hills",
+    "age": 30,
+    "yearsActive": 10,
+    "image": "https://s3.amazonaws.com/uifaces/faces/twitter/cadikkara/128.jpg",
+    "genre": "Bloghaus",
+    "website": "http://leonard.com",
+    "netWorth": 3889202,
+    "labelName": "Witting Inc",
+    "retired": true,
+    "albums": [
+      {
+        "title": "COMPUTER PARSING",
+        "date": "2017-03-11T14:25:41.125Z",
+        "copiesSold": 170424,
+        "numberTracks": 12,
+        "image": "http://lorempixel.com/640/480/technics",
+        "revenue": 2213807.7600000002
+      },
+      {
+        "title": "CONVERGENCE",
+        "date": "2016-11-04T09:15:56.343Z",
+        "copiesSold": 170424,
+        "numberTracks": 12,
+        "image": "https://s3.amazonaws.com/uifaces/faces/twitter/klefue/128.jpg",
+        "revenue": 2213807.7600000002
+      }
+    ]
+  },
+  {
+    "_id": 5,
+    "name": "Winfield Swaniawski",
+    "age": 22,
+    "yearsActive": 12,
+    "image": "https://s3.amazonaws.com/uifaces/faces/twitter/brunodesign1206/128.jpg",
+    "genre": "Power Electronics",
+    "website": "https://isadore.com",
+    "netWorth": 2095269,
+    "labelName": "Barton - Keebler",
+    "retired": true,
+    "albums": [
+      {
+        "title": "PHILIPPINE PESO BUS",
+        "date": "2016-08-09T21:16:13.578Z",
+        "copiesSold": 797630,
+        "numberTracks": 7,
+        "image": "http://lorempixel.com/640/480/people",
+        "revenue": 10361213.7
+      },
+      {
+        "title": "ASSOCIATE ORGANIC BLUETOOTH",
+        "date": "2016-10-16T20:56:23.592Z",
+        "copiesSold": 797630,
+        "numberTracks": 14,
+        "image": "http://lorempixel.com/640/480/nightlife",
+        "revenue": 10361213.7
+      },
+      {
+        "title": "POUND STERLING PARKWAY",
+        "date": "2016-10-16T13:23:22.240Z",
+        "copiesSold": 797630,
+        "numberTracks": 4,
+        "image": "http://lorempixel.com/640/480/transport",
+        "revenue": 10361213.7
+      }
+    ]
+  },
+  {
+    "_id": 6,
+    "name": "Talon Zemlak",
+    "age": 38,
+    "yearsActive": 11,
+    "image": "https://s3.amazonaws.com/uifaces/faces/twitter/victor_haydin/128.jpg",
+    "genre": "Hypnagogic Pop",
+    "website": "http://jaquan.com",
+    "netWorth": 719928,
+    "labelName": "Von, Ruecker and Stamm",
+    "retired": true,
+    "albums": []
+  },
+  {
+    "_id": 7,
+    "name": "Heaven Crist",
+    "age": 24,
+    "yearsActive": 4,
+    "image": "https://s3.amazonaws.com/uifaces/faces/twitter/roxanejammet/128.jpg",
+    "genre": "Power Electronics",
+    "website": "https://maci.info",
+    "netWorth": 2221282,
+    "labelName": "Dare, Huel and Yundt",
+    "retired": false,
+    "albums": [
+      {
+        "title": "PRICING STRUCTURE HARD DRIVE WITHDRAWAL",
+        "date": "2017-02-01T07:28:05.948Z",
+        "copiesSold": 828420,
+        "numberTracks": 12,
+        "image": "https://s3.amazonaws.com/uifaces/faces/twitter/ManikRathee/128.jpg",
+        "revenue": 10761175.8
+      },
+      {
+        "title": "PRIMARY",
+        "date": "2017-01-15T16:10:47.553Z",
+        "copiesSold": 828420,
+        "numberTracks": 5,
+        "image": "http://lorempixel.com/640/480",
+        "revenue": 10761175.8
+      },
+      {
+        "title": "APPLICATION INDEXING FACILITATE",
+        "date": "2017-03-20T15:42:45.457Z",
+        "copiesSold": 828420,
+        "numberTracks": 7,
+        "image": "http://lorempixel.com/640/480/food",
+        "revenue": 10761175.8
+      },
+      {
+        "title": "SMALL PLASTIC SALAD CLOTHING CAYMAN ISLANDS",
+        "date": "2017-01-16T05:20:46.160Z",
+        "copiesSold": 828420,
+        "numberTracks": 12,
+        "image": "http://lorempixel.com/640/480/people",
+        "revenue": 10761175.8
+      }
+    ]
+  },
+  {
+    "_id": 8,
+    "name": "Jackson Bosco",
+    "age": 16,
+    "yearsActive": 4,
+    "image": "https://s3.amazonaws.com/uifaces/faces/twitter/dcalonaci/128.jpg",
+    "genre": "Cool Jazz",
+    "website": "https://colleen.info",
+    "netWorth": 4731063,
+    "labelName": "Renner - Little",
+    "retired": true,
+    "albums": []
+  },
+  {
+    "_id": 9,
+    "name": "Peyton Rolfson",
+    "age": 38,
+    "yearsActive": 8,
+    "image": "https://s3.amazonaws.com/uifaces/faces/twitter/amywebbb/128.jpg",
+    "genre": "Witch House",
+    "website": "http://eda.info",
+    "netWorth": 1793509,
+    "labelName": "Hills, Homenick and Runolfsson",
+    "retired": false,
+    "albums": [
+      {
+        "title": "WITHDRAWAL HOLLOW",
+        "date": "2017-03-27T23:01:28.499Z",
+        "copiesSold": 16467,
+        "numberTracks": 19,
+        "image": "https://s3.amazonaws.com/uifaces/faces/twitter/andytlaw/128.jpg",
+        "revenue": 213906.33000000002
+      },
+      {
+        "title": "ERGONOMIC",
+        "date": "2017-06-24T15:17:28.716Z",
+        "copiesSold": 16467,
+        "numberTracks": 19,
+        "image": "http://lorempixel.com/640/480/food",
+        "revenue": 213906.33000000002
+      }
+    ]
+  },
+  {
+    "_id": 10,
+    "name": "Breana Rutherford",
+    "age": 19,
+    "yearsActive": 11,
+    "image": "https://s3.amazonaws.com/uifaces/faces/twitter/katiemdaly/128.jpg",
+    "genre": "Digital Punk",
+    "website": "https://valentin.org",
+    "netWorth": 518396,
+    "labelName": "Littel Group",
+    "retired": false,
+    "albums": [
+      {
+        "title": "ENTERPRISE CAMEROON",
+        "date": "2017-01-18T17:26:09.033Z",
+        "copiesSold": 616752,
+        "numberTracks": 19,
+        "image": "http://lorempixel.com/640/480/nightlife",
+        "revenue": 8011608.48
+      }
+    ]
+  },
+  {
+    "_id": 11,
+    "name": "Alexandro Schoen",
+    "age": 40,
+    "yearsActive": 6,
+    "image": "https://s3.amazonaws.com/uifaces/faces/twitter/thiagovernetti/128.jpg",
+    "genre": "Acceptable Emo",
+    "website": "http://quincy.net",
+    "netWorth": 3840283,
+    "labelName": "Witting - Kunde",
+    "retired": false,
+    "albums": [
+      {
+        "title": "ADAPTER",
+        "date": "2016-10-18T04:02:00.948Z",
+        "copiesSold": 793935,
+        "numberTracks": 16,
+        "image": "http://lorempixel.com/640/480/abstract",
+        "revenue": 10313215.65
+      },
+      {
+        "title": "CONCRETE CONNECTING METAL",
+        "date": "2016-09-11T15:41:46.360Z",
+        "copiesSold": 793935,
+        "numberTracks": 2,
+        "image": "http://lorempixel.com/640/480/business",
+        "revenue": 10313215.65
+      },
+      {
+        "title": "UNBRANDED SCALABLE",
+        "date": "2017-02-09T10:13:52.578Z",
+        "copiesSold": 793935,
+        "numberTracks": 11,
+        "image": "http://lorempixel.com/640/480/sports",
+        "revenue": 10313215.65
+      },
+      {
+        "title": "SWISS FRANC DIDACTIC RSS",
+        "date": "2017-05-20T00:02:10.423Z",
+        "copiesSold": 793935,
+        "numberTracks": 1,
+        "image": "http://lorempixel.com/640/480/cats",
+        "revenue": 10313215.65
+      }
+    ]
+  },
+  {
+    "_id": 12,
+    "name": "Solon Marks",
+    "age": 36,
+    "yearsActive": 7,
+    "image": "https://s3.amazonaws.com/uifaces/faces/twitter/_williamguerra/128.jpg",
+    "genre": "Power Electronics",
+    "website": "http://dimitri.info",
+    "netWorth": 321611,
+    "labelName": "Lakin Group",
+    "retired": true,
+    "albums": [
+      {
+        "title": "WASHINGTON RUSTIC RUBBER BIKE ARCHITECT",
+        "date": "2017-03-25T17:16:35.845Z",
+        "copiesSold": 167139,
+        "numberTracks": 11,
+        "image": "http://lorempixel.com/640/480/nature",
+        "revenue": 2171135.61
+      },
+      {
+        "title": "HANDMADE",
+        "date": "2017-06-16T12:33:28.620Z",
+        "copiesSold": 167139,
+        "numberTracks": 1,
+        "image": "http://lorempixel.com/640/480/sports",
+        "revenue": 2171135.61
+      },
+      {
+        "title": "MISSISSIPPI BLEEDING-EDGE",
+        "date": "2016-12-28T03:31:29.003Z",
+        "copiesSold": 167139,
+        "numberTracks": 10,
+        "image": "http://lorempixel.com/640/480/transport",
+        "revenue": 2171135.61
+      },
+      {
+        "title": "AGGREGATE MALTA",
+        "date": "2017-05-17T07:04:33.923Z",
+        "copiesSold": 167139,
+        "numberTracks": 3,
+        "image": "http://lorempixel.com/640/480/fashion",
+        "revenue": 2171135.61
+      }
+    ]
+  },
+  {
+    "_id": 13,
+    "name": "Mae Bradtke",
+    "age": 18,
+    "yearsActive": 13,
+    "image": "https://s3.amazonaws.com/uifaces/faces/twitter/zforrester/128.jpg",
+    "genre": "Alt-Country",
+    "website": "https://annamae.name",
+    "netWorth": 3397214,
+    "labelName": "Weimann - Waters",
+    "retired": false,
+    "albums": []
+  },
+  {
+    "_id": 14,
+    "name": "Andy Wehner",
+    "age": 35,
+    "yearsActive": 10,
+    "image": "https://s3.amazonaws.com/uifaces/faces/twitter/findingjenny/128.jpg",
+    "genre": "Alt-Country",
+    "website": "https://cora.com",
+    "netWorth": 3950324,
+    "labelName": "Okuneva, Boyle and Harber",
+    "retired": true,
+    "albums": [
+      {
+        "title": "PARSING",
+        "date": "2017-06-06T01:49:20.974Z",
+        "copiesSold": 977001,
+        "numberTracks": 7,
+        "image": "http://lorempixel.com/640/480/technics",
+        "revenue": 12691242.99
+      },
+      {
+        "title": "VERTICAL",
+        "date": "2016-12-03T23:39:22.023Z",
+        "copiesSold": 977001,
+        "numberTracks": 19,
+        "image": "http://lorempixel.com/640/480/nature",
+        "revenue": 12691242.99
+      },
+      {
+        "title": "HUMAN HDD",
+        "date": "2017-04-07T04:34:34.746Z",
+        "copiesSold": 977001,
+        "numberTracks": 11,
+        "image": "http://lorempixel.com/640/480/sports",
+        "revenue": 12691242.99
+      }
+    ]
+  },
+  {
+    "_id": 15,
+    "name": "Laurie Schmeler",
+    "age": 24,
+    "yearsActive": 8,
+    "image": "https://s3.amazonaws.com/uifaces/faces/twitter/karthipanraj/128.jpg",
+    "genre": "Power Electronics",
+    "website": "https://libbie.name",
+    "netWorth": 452363,
+    "labelName": "Howell Inc",
+    "retired": false,
+    "albums": [
+      {
+        "title": "UGANDA SHILLING",
+        "date": "2017-05-12T07:35:47.251Z",
+        "copiesSold": 556236,
+        "numberTracks": 18,
+        "image": "http://lorempixel.com/640/480/people",
+        "revenue": 7225505.64
+      }
+    ]
+  },
+  {
+    "_id": 16,
+    "name": "Kolby Murphy",
+    "age": 43,
+    "yearsActive": 3,
+    "image": "https://s3.amazonaws.com/uifaces/faces/twitter/mrxloka/128.jpg",
+    "genre": "Digital Punk",
+    "website": "http://brionna.biz",
+    "netWorth": 749699,
+    "labelName": "Schoen LLC",
+    "retired": false,
+    "albums": [
+      {
+        "title": "TERTIARY BLUE",
+        "date": "2017-04-09T01:40:26.969Z",
+        "copiesSold": 487724,
+        "numberTracks": 13,
+        "image": "http://lorempixel.com/640/480",
+        "revenue": 6335534.76
+      },
+      {
+        "title": "GREY REFINED WOODEN CHAIR",
+        "date": "2016-12-26T05:23:08.226Z",
+        "copiesSold": 487724,
+        "numberTracks": 16,
+        "image": "http://lorempixel.com/640/480/cats",
+        "revenue": 6335534.76
+      }
+    ]
+  },
+  {
+    "_id": 17,
+    "name": "Bria Kirlin MD",
+    "age": 22,
+    "yearsActive": 12,
+    "image": "https://s3.amazonaws.com/uifaces/faces/twitter/mahmoudmetwally/128.jpg",
+    "genre": "Witch House",
+    "website": "https://theodora.biz",
+    "netWorth": 3504868,
+    "labelName": "McGlynn - Davis",
+    "retired": true,
+    "albums": [
+      {
+        "title": "ASSURANCE",
+        "date": "2016-11-19T20:46:41.101Z",
+        "copiesSold": 682190,
+        "numberTracks": 3,
+        "image": "http://lorempixel.com/640/480/sports",
+        "revenue": 8861648.1
+      },
+      {
+        "title": "POUND STERLING INFRASTRUCTURES LICENSED",
+        "date": "2017-05-08T19:06:01.883Z",
+        "copiesSold": 682190,
+        "numberTracks": 9,
+        "image": "http://lorempixel.com/640/480/sports",
+        "revenue": 8861648.1
+      },
+      {
+        "title": "HANDCRAFTED MOBILE CSS",
+        "date": "2017-05-03T06:23:03.704Z",
+        "copiesSold": 682190,
+        "numberTracks": 17,
+        "image": "http://lorempixel.com/640/480/people",
+        "revenue": 8861648.1
+      },
+      {
+        "title": "CANADIAN DOLLAR ESTATE NEW ZEALAND DOLLAR",
+        "date": "2016-10-31T10:26:16.760Z",
+        "copiesSold": 682190,
+        "numberTracks": 1,
+        "image": "http://lorempixel.com/640/480/animals",
+        "revenue": 8861648.1
+      }
+    ]
+  },
+  {
+    "_id": 18,
+    "name": "Tavares Howell",
+    "age": 43,
+    "yearsActive": 14,
+    "image": "https://s3.amazonaws.com/uifaces/faces/twitter/roybarberuk/128.jpg",
+    "genre": "Noise Pop",
+    "website": "https://nathanael.biz",
+    "netWorth": 3953713,
+    "labelName": "Hessel, Prohaska and Gleason",
+    "retired": false,
+    "albums": [
+      {
+        "title": "PROGRAMMING REBOOT COTTON",
+        "date": "2016-11-23T20:18:12.863Z",
+        "copiesSold": 805748,
+        "numberTracks": 11,
+        "image": "http://lorempixel.com/640/480/sports",
+        "revenue": 10466666.52
+      }
+    ]
+  },
+  {
+    "_id": 19,
+    "name": "Lukas Graham Jr.",
+    "age": 16,
+    "yearsActive": 2,
+    "image": "https://s3.amazonaws.com/uifaces/faces/twitter/r_oy/128.jpg",
+    "genre": "Blog Rap",
+    "website": "http://deshawn.name",
+    "netWorth": 3905063,
+    "labelName": "O'Connell and Sons",
+    "retired": true,
+    "albums": [
+      {
+        "title": "PORT DISTRICT",
+        "date": "2017-02-26T18:01:59.831Z",
+        "copiesSold": 270927,
+        "numberTracks": 17,
+        "image": "http://lorempixel.com/640/480/food",
+        "revenue": 3519341.73
+      },
+      {
+        "title": "ELECTRONICS SCSI PARSE",
+        "date": "2016-09-06T08:59:48.380Z",
+        "copiesSold": 270927,
+        "numberTracks": 6,
+        "image": "http://lorempixel.com/640/480/nightlife",
+        "revenue": 3519341.73
+      },
+      {
+        "title": "INVERSE",
+        "date": "2017-04-12T07:00:48.728Z",
+        "copiesSold": 270927,
+        "numberTracks": 17,
+        "image": "http://lorempixel.com/640/480/nature",
+        "revenue": 3519341.73
+      }
+    ]
+  },
+  {
+    "_id": 20,
+    "name": "Javon Bednar",
+    "age": 23,
+    "yearsActive": 9,
+    "image": "https://s3.amazonaws.com/uifaces/faces/twitter/turkutuuli/128.jpg",
+    "genre": "Acceptable Pop-Punk",
+    "website": "https://cecile.biz",
+    "netWorth": 578736,
+    "labelName": "Reichel - Beahan",
+    "retired": false,
+    "albums": [
+      {
+        "title": "FRENCH GUIANA",
+        "date": "2017-07-02T01:59:44.653Z",
+        "copiesSold": 831817,
+        "numberTracks": 17,
+        "image": "http://lorempixel.com/640/480/city",
+        "revenue": 10805302.83
+      },
+      {
+        "title": "PLAINS ADMINISTRATOR",
+        "date": "2016-08-30T07:23:12.558Z",
+        "copiesSold": 831817,
+        "numberTracks": 18,
+        "image": "http://lorempixel.com/640/480/transport",
+        "revenue": 10805302.83
+      },
+      {
+        "title": "PLANNER PARSING",
+        "date": "2017-06-28T07:16:42.219Z",
+        "copiesSold": 831817,
+        "numberTracks": 3,
+        "image": "http://lorempixel.com/640/480/food",
+        "revenue": 10805302.83
+      }
+    ]
+  },
+  {
+    "_id": 21,
+    "name": "Aglae Mraz",
+    "age": 33,
+    "yearsActive": 6,
+    "image": "https://s3.amazonaws.com/uifaces/faces/twitter/herrhaase/128.jpg",
+    "genre": "Acceptable Emo",
+    "website": "https://neva.net",
+    "netWorth": 1994362,
+    "labelName": "Spinka, Fay and O'Kon",
+    "retired": true,
+    "albums": [
+      {
+        "title": "US DOLLAR RAM EXTENSIBLE",
+        "date": "2016-09-27T16:14:52.608Z",
+        "copiesSold": 789962,
+        "numberTracks": 4,
+        "image": "http://lorempixel.com/640/480/nature",
+        "revenue": 10261606.38
+      },
+      {
+        "title": "GENERIC",
+        "date": "2017-04-26T18:44:29.299Z",
+        "copiesSold": 789962,
+        "numberTracks": 2,
+        "image": "http://lorempixel.com/640/480/people",
+        "revenue": 10261606.38
+      }
+    ]
+  },
+  {
+    "_id": 22,
+    "name": "Tito Medhurst",
+    "age": 32,
+    "yearsActive": 0,
+    "image": "https://s3.amazonaws.com/uifaces/faces/twitter/nitinhayaran/128.jpg",
+    "genre": "Garage Rock",
+    "website": "http://robyn.net",
+    "netWorth": 1700823,
+    "labelName": "Fahey - Upton",
+    "retired": true,
+    "albums": [
+      {
+        "title": "MORPH",
+        "date": "2017-01-02T14:07:04.134Z",
+        "copiesSold": 260062,
+        "numberTracks": 18,
+        "image": "http://lorempixel.com/640/480/business",
+        "revenue": 3378205.38
+      }
+    ]
+  },
+  {
+    "_id": 23,
+    "name": "Maureen Becker",
+    "age": 23,
+    "yearsActive": 6,
+    "image": "https://s3.amazonaws.com/uifaces/faces/twitter/bu7921/128.jpg",
+    "genre": "Hypnagogic Pop",
+    "website": "https://delaney.net",
+    "netWorth": 1734482,
+    "labelName": "Koss - Hodkiewicz",
+    "retired": false,
+    "albums": [
+      {
+        "title": "PROGRAM",
+        "date": "2017-05-08T23:21:30.816Z",
+        "copiesSold": 592144,
+        "numberTracks": 7,
+        "image": "http://lorempixel.com/640/480/technics",
+        "revenue": 7691950.5600000005
+      },
+      {
+        "title": "INVOICE",
+        "date": "2016-11-10T09:33:03.717Z",
+        "copiesSold": 592144,
+        "numberTracks": 9,
+        "image": "http://lorempixel.com/640/480/city",
+        "revenue": 7691950.5600000005
+      },
+      {
+        "title": "MULTI-BYTE WITHDRAWAL CHECKING ACCOUNT",
+        "date": "2016-09-13T09:42:06.856Z",
+        "copiesSold": 592144,
+        "numberTracks": 7,
+        "image": "http://lorempixel.com/640/480/cats",
+        "revenue": 7691950.5600000005
+      }
+    ]
+  },
+  {
+    "_id": 24,
+    "name": "Fritz Bartoletti",
+    "age": 33,
+    "yearsActive": 9,
+    "image": "https://s3.amazonaws.com/uifaces/faces/twitter/haruintesettden/128.jpg",
+    "genre": "Garage Rock",
+    "website": "https://vaughn.com",
+    "netWorth": 542645,
+    "labelName": "Kuvalis - Gottlieb",
+    "retired": true,
+    "albums": [
+      {
+        "title": "INTELLIGENT METAL SAUSAGES COMPUTERS GENERIC STEEL SOAP",
+        "date": "2017-05-01T02:37:34.835Z",
+        "copiesSold": 261121,
+        "numberTracks": 1,
+        "image": "http://lorempixel.com/640/480/food",
+        "revenue": 3391961.79
+      },
+      {
+        "title": "PAYMENT",
+        "date": "2017-07-24T17:56:08.374Z",
+        "copiesSold": 261121,
+        "numberTracks": 2,
+        "image": "http://lorempixel.com/640/480/transport",
+        "revenue": 3391961.79
+      },
+      {
+        "title": "PERSISTENT WITHDRAWAL ERGONOMIC",
+        "date": "2017-03-22T04:47:23.423Z",
+        "copiesSold": 261121,
+        "numberTracks": 13,
+        "image": "http://lorempixel.com/640/480/cats",
+        "revenue": 3391961.79
+      },
+      {
+        "title": "TOWELS CHECKING ACCOUNT",
+        "date": "2017-01-11T22:21:29.311Z",
+        "copiesSold": 261121,
+        "numberTracks": 9,
+        "image": "http://lorempixel.com/640/480/business",
+        "revenue": 3391961.79
+      }
+    ]
+  },
+  {
+    "_id": 25,
+    "name": "Leanna Wiza",
+    "age": 15,
+    "yearsActive": 13,
+    "image": "https://s3.amazonaws.com/uifaces/faces/twitter/ainsleywagon/128.jpg",
+    "genre": "Garage Rock",
+    "website": "https://julio.info",
+    "netWorth": 3200779,
+    "labelName": "Willms - Price",
+    "retired": false,
+    "albums": []
+  },
+  {
+    "_id": 26,
+    "name": "Reed Gottlieb",
+    "age": 36,
+    "yearsActive": 1,
+    "image": "https://s3.amazonaws.com/uifaces/faces/twitter/scottiedude/128.jpg",
+    "genre": "Alt-Country",
+    "website": "http://ressie.org",
+    "netWorth": 3613558,
+    "labelName": "Lindgren LLC",
+    "retired": false,
+    "albums": [
+      {
+        "title": "PAYMENT",
+        "date": "2017-04-08T00:06:25.647Z",
+        "copiesSold": 924867,
+        "numberTracks": 9,
+        "image": "http://lorempixel.com/640/480/business",
+        "revenue": 12014022.33
+      }
+    ]
+  },
+  {
+    "_id": 27,
+    "name": "Benedict Haley",
+    "age": 28,
+    "yearsActive": 12,
+    "image": "https://s3.amazonaws.com/uifaces/faces/twitter/guillemboti/128.jpg",
+    "genre": "Acceptable Country",
+    "website": "http://percival.biz",
+    "netWorth": 2300672,
+    "labelName": "Gutkowski, Kohler and Ritchie",
+    "retired": false,
+    "albums": []
+  },
+  {
+    "_id": 28,
+    "name": "Jaida Zboncak Sr.",
+    "age": 37,
+    "yearsActive": 11,
+    "image": "https://s3.amazonaws.com/uifaces/faces/twitter/arashmanteghi/128.jpg",
+    "genre": "Digital Punk",
+    "website": "https://lola.info",
+    "netWorth": 1216961,
+    "labelName": "Emmerich LLC",
+    "retired": false,
+    "albums": [
+      {
+        "title": "SHOES",
+        "date": "2017-07-29T00:19:20.911Z",
+        "copiesSold": 364478,
+        "numberTracks": 10,
+        "image": "http://lorempixel.com/640/480/city",
+        "revenue": 4734569.22
+      }
+    ]
+  },
+  {
+    "_id": 29,
+    "name": "Dr. Karelle Hane",
+    "age": 31,
+    "yearsActive": 10,
+    "image": "https://s3.amazonaws.com/uifaces/faces/twitter/n1ght_coder/128.jpg",
+    "genre": "Serialism",
+    "website": "http://alena.net",
+    "netWorth": 672384,
+    "labelName": "Willms, Orn and Wiza",
+    "retired": false,
+    "albums": [
+      {
+        "title": "FIREWALL",
+        "date": "2017-01-01T11:56:44.153Z",
+        "copiesSold": 963838,
+        "numberTracks": 4,
+        "image": "http://lorempixel.com/640/480/sports",
+        "revenue": 12520255.620000001
+      },
+      {
+        "title": "CHEESE",
+        "date": "2017-03-17T08:34:35.796Z",
+        "copiesSold": 963838,
+        "numberTracks": 3,
+        "image": "http://lorempixel.com/640/480/sports",
+        "revenue": 12520255.620000001
+      },
+      {
+        "title": "WITHDRAWAL CORPORATE PERSONAL LOAN ACCOUNT",
+        "date": "2017-01-01T21:34:53.406Z",
+        "copiesSold": 963838,
+        "numberTracks": 10,
+        "image": "http://lorempixel.com/640/480/nature",
+        "revenue": 12520255.620000001
+      },
+      {
+        "title": "BERKSHIRE INFRASTRUCTURES",
+        "date": "2017-03-10T03:15:03.131Z",
+        "copiesSold": 963838,
+        "numberTracks": 15,
+        "image": "http://lorempixel.com/640/480/business",
+        "revenue": 12520255.620000001
+      }
+    ]
+  },
+  {
+    "_id": 30,
+    "name": "Ernestina Schoen",
+    "age": 41,
+    "yearsActive": 11,
+    "image": "https://s3.amazonaws.com/uifaces/faces/twitter/jimmuirhead/128.jpg",
+    "genre": "Digital Punk",
+    "website": "http://braxton.name",
+    "netWorth": 1006255,
+    "labelName": "Parisian LLC",
+    "retired": true,
+    "albums": [
+      {
+        "title": "CAMBRIDGESHIRE",
+        "date": "2017-01-02T01:59:41.084Z",
+        "copiesSold": 245943,
+        "numberTracks": 10,
+        "image": "http://lorempixel.com/640/480/animals",
+        "revenue": 3194799.57
+      },
+      {
+        "title": "STRUCTURE EXTENDED LAND",
+        "date": "2016-12-04T01:09:26.769Z",
+        "copiesSold": 245943,
+        "numberTracks": 13,
+        "image": "http://lorempixel.com/640/480/sports",
+        "revenue": 3194799.57
+      },
+      {
+        "title": "EQUATORIAL GUINEA BOOKS",
+        "date": "2017-05-02T08:21:17.486Z",
+        "copiesSold": 245943,
+        "numberTracks": 15,
+        "image": "http://lorempixel.com/640/480/sports",
+        "revenue": 3194799.57
+      }
+    ]
+  },
+  {
+    "_id": 31,
+    "name": "Monserrate Larkin",
+    "age": 18,
+    "yearsActive": 7,
+    "image": "https://s3.amazonaws.com/uifaces/faces/twitter/lepetitogre/128.jpg",
+    "genre": "Alt-Country",
+    "website": "http://daryl.biz",
+    "netWorth": 2169780,
+    "labelName": "Shields Group",
+    "retired": false,
+    "albums": []
+  },
+  {
+    "_id": 32,
+    "name": "Juliet Greenfelder",
+    "age": 43,
+    "yearsActive": 12,
+    "image": "https://s3.amazonaws.com/uifaces/faces/twitter/juaumlol/128.jpg",
+    "genre": "Noise Pop",
+    "website": "https://lyda.name",
+    "netWorth": 3822245,
+    "labelName": "Kemmer LLC",
+    "retired": true,
+    "albums": [
+      {
+        "title": "NAVIGATING SKY BLUE",
+        "date": "2017-07-16T10:54:05.643Z",
+        "copiesSold": 901101,
+        "numberTracks": 19,
+        "image": "http://lorempixel.com/640/480/animals",
+        "revenue": 11705301.99
+      },
+      {
+        "title": "SKY BLUE",
+        "date": "2017-06-06T06:08:44.707Z",
+        "copiesSold": 901101,
+        "numberTracks": 16,
+        "image": "http://lorempixel.com/640/480/people",
+        "revenue": 11705301.99
+      },
+      {
+        "title": "SOFT VIRGIN ISLANDS, U.S.",
+        "date": "2016-09-29T11:43:07.887Z",
+        "copiesSold": 901101,
+        "numberTracks": 6,
+        "image": "http://lorempixel.com/640/480/city",
+        "revenue": 11705301.99
+      },
+      {
+        "title": "PARTNERSHIPS",
+        "date": "2016-09-14T01:07:31.461Z",
+        "copiesSold": 901101,
+        "numberTracks": 12,
+        "image": "http://lorempixel.com/640/480/fashion",
+        "revenue": 11705301.99
+      }
+    ]
+  },
+  {
+    "_id": 33,
+    "name": "Trycia Koelpin",
+    "age": 21,
+    "yearsActive": 13,
+    "image": "https://s3.amazonaws.com/uifaces/faces/twitter/wesleytrankin/128.jpg",
+    "genre": "Freak Folk",
+    "website": "http://dora.com",
+    "netWorth": 1196663,
+    "labelName": "Denesik Group",
+    "retired": true,
+    "albums": []
+  },
+  {
+    "_id": 34,
+    "name": "Mallory Hills",
+    "age": 21,
+    "yearsActive": 2,
+    "image": "https://s3.amazonaws.com/uifaces/faces/twitter/attacks/128.jpg",
+    "genre": "Blog Rap",
+    "website": "http://elwyn.info",
+    "netWorth": 4347084,
+    "labelName": "Ondricka Inc",
+    "retired": true,
+    "albums": [
+      {
+        "title": "MINDSHARE GRAPHICAL USER INTERFACE VIRTUAL",
+        "date": "2017-07-18T02:05:59.740Z",
+        "copiesSold": 199483,
+        "numberTracks": 15,
+        "image": "http://lorempixel.com/640/480/abstract",
+        "revenue": 2591284.17
+      },
+      {
+        "title": "PORT ONE-TO-ONE SMALL",
+        "date": "2017-03-29T04:30:12.614Z",
+        "copiesSold": 199483,
+        "numberTracks": 10,
+        "image": "http://lorempixel.com/640/480",
+        "revenue": 2591284.17
+      },
+      {
+        "title": "CALCULATE UNBRANDED COMMUNICATIONS",
+        "date": "2016-11-20T11:06:00.619Z",
+        "copiesSold": 199483,
+        "numberTracks": 13,
+        "image": "http://lorempixel.com/640/480",
+        "revenue": 2591284.17
+      }
+    ]
+  },
+  {
+    "_id": 35,
+    "name": "Shaniya Auer",
+    "age": 34,
+    "yearsActive": 4,
+    "image": "https://s3.amazonaws.com/uifaces/faces/twitter/russell_baylis/128.jpg",
+    "genre": "Noise Pop",
+    "website": "http://jason.name",
+    "netWorth": 4699290,
+    "labelName": "Hoppe, Schaden and Reichert",
+    "retired": false,
+    "albums": [
+      {
+        "title": "MOBILE TASTY GUATEMALA",
+        "date": "2017-02-06T18:51:14.019Z",
+        "copiesSold": 951652,
+        "numberTracks": 7,
+        "image": "https://s3.amazonaws.com/uifaces/faces/twitter/cadikkara/128.jpg",
+        "revenue": 12361959.48
+      },
+      {
+        "title": "TCP AUXILIARY RIAL OMANI",
+        "date": "2017-07-21T07:03:13.229Z",
+        "copiesSold": 951652,
+        "numberTracks": 18,
+        "image": "https://s3.amazonaws.com/uifaces/faces/twitter/aaroni/128.jpg",
+        "revenue": 12361959.48
+      },
+      {
+        "title": "ALARM",
+        "date": "2017-04-21T16:02:01.064Z",
+        "copiesSold": 951652,
+        "numberTracks": 4,
+        "image": "http://lorempixel.com/640/480/technics",
+        "revenue": 12361959.48
+      }
+    ]
+  }
+]

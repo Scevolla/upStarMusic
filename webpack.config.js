@@ -22,7 +22,7 @@ var config = {
     vendor: VENDOR_LIBS
   },
   output: {
-    path: path.join(__dirname, 'dist'),
+    path: path.join(__dirname, 'server/public'),
     filename: '[name].js'
   },
   module: {
@@ -49,7 +49,7 @@ var config = {
     })
   ],
   devServer: {
-    contentBase: path.join(__dirname, 'dist'),
+    contentBase: path.join(__dirname, 'server/public'),
     port: 9000
   }
 }
