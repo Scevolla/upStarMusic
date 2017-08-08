@@ -18,7 +18,7 @@ const VENDOR_LIBS = [
 var config = {
   devtool: production ? false : 'cheap-eval-source-map',
   entry: {
-    bundle: './src/index.js',
+    bundle: './client/index.js',
     vendor: VENDOR_LIBS
   },
   output: {
@@ -45,7 +45,7 @@ var config = {
       names: ['vendor', 'manifest']
     }),
     new HtmlWebpackPlugin({
-      template: 'src/index.html'
+      template: 'client/index.html'
     })
   ],
   devServer: {
