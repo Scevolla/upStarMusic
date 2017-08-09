@@ -1,5 +1,6 @@
 import { hashHistory } from 'react-router';
 import { maxPropOfArray, minPropOfArray } from '../../helpers/utils.js';
+import * as queries from './queries.js';
 import {
   FILTER_CHANGED,
   LOAD_INITIAL_DATA,
@@ -63,10 +64,13 @@ export const changeRetired = (aIDs, bSetRetired) => (dispatch, getState) =>
     .then(() => dispatch({ type: RESET_SELECTION }));
 
 export const setFilterRanges = () => dispatch =>
-  GetFilterRangesProxy()
-    .then(result =>
-      dispatch({ type: SET_FILTER_RANGES, payload: result })
-    );
+  queries.queryFilterRanges()
+    .then(result => {
+      return dispatch({ type: SET_FILTER_RANGES, payload: result })
+    })
+    .catch(error => {
+      console.log('queryFilterRanges error: ', error);
+    });
 
 export const searchArtists = (oFilters) => dispatch => 
   SearchArtistsProxy(oFilters)

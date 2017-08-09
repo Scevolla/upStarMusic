@@ -20,6 +20,6 @@ module.exports = () => {
             }       
         }; 
         resolve(ranges);
-    }, 3000);
+    }, 500);
   });
 };
