@@ -8,10 +8,6 @@ router.get('/api', function(req, res) {
   res.json(aData);
 });
 
-router.get('/api/filter-ranges', function(req, res) {
-  res.json({min: 30, max: 50});
-});
-
 router.use(bodyParser.json());
 router.use(bodyParser.urlencoded({ extended: false }));
 

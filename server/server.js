@@ -11,7 +11,8 @@ app.set('port', process.env.PORT || 3050);
 app.set('aData', dataFile);
 
 app.use(express.static(path.join(__dirname, 'public')));
-app.use(require('./routes/api'));
+app.use(require('./routes/api/'));
+app.use(require('./routes/api/filter-ranges.js'));
 
 // if (process.env.NODE_ENV !== 'production') {
 //   console.log('Using webpack-dev-middleware');

@@ -3,10 +3,7 @@ import { maxPropOfArray, minPropOfArray } from '../../helpers/utils.js';
 import * as queries from './queries.js';
 import {
   FILTER_CHANGED,
-  LOAD_INITIAL_DATA,
   SET_FILTER_RANGES,
-  SET_AGE_RANGE,
-  SET_YEARS_ACTIVE_RANGE,
   SEARCH_ARTISTS,
   FIND_ARTIST,
   RESET_ARTIST,
@@ -19,17 +16,13 @@ import {
   RESET_SELECTION
 } from './types';
 
-import GetFilterRanges from '../../database/queries/GetFilterRanges';
+//import GetFilterRanges from '../../database/queries/GetFilterRanges';
 import SearchArtists from '../../database/queries/SearchArtists';
 import FindArtist from '../../database/queries/FindArtist';
 import CreateArtist from '../../database/queries/CreateArtist';
 import EditArtist from '../../database/queries/EditArtist';
 import DeleteArtist from '../../database/queries/DeleteArtist';
 import ChangeRetired from '../../database/queries/ChangeRetired';
-
-export const loadInitialData = () => {
-  return searchArtists();
-};
 
 export const filterChanged = (values) => {
   return { type: FILTER_CHANGED, payload: values };
@@ -43,11 +36,11 @@ export const clearError = () => {
   return { type: CLEAR_ERROR };
 };
 
-export const selectArtist = id => {
+export const selectArtist = (id) => {
   return { type: SELECT_ARTIST, payload: id };
 };
 
-export const deselectArtist = id => {
+export const deselectArtist = (id) => {
   return { type: DESELECT_ARTIST, payload: id };
 };
 
@@ -63,7 +56,7 @@ export const changeRetired = (aIDs, bSetRetired) => (dispatch, getState) =>
   ChangeRetiredProxy(aIDs, bSetRetired)
     .then(() => dispatch({ type: RESET_SELECTION }));
 
-export const setFilterRanges = () => dispatch =>
+export const setFilterRanges = () => (dispatch) =>
   queries.queryFilterRanges()
     .then(result => {
       return dispatch({ type: SET_FILTER_RANGES, payload: result })
@@ -114,13 +107,13 @@ export const deleteArtist = (id) => dispatch =>
 //
 // Faux Proxies
 
-const GetFilterRangesProxy = () => {
-  const result = GetFilterRanges();
-  if (!result || !result.then) {
-    return new Promise(() => {});
-  }
-  return result;
-};
+// const GetFilterRangesProxy = () => {
+//   const result = GetFilterRanges();
+//   if (!result || !result.then) {
+//     return new Promise(() => {});
+//   }
+//   return result;
+// };
 
 const SearchArtistsProxy = (oFilters) => {
   const result = SearchArtists(oFilters);

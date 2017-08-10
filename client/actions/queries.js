@@ -9,7 +9,7 @@ export const queryFilterRanges = () => {
         console.log('request succeeded with JSON response', data);
         resolve(data);
       }).catch(function(error) {
-        console.log('request failed', error);
+        console.log('request failed ', error);
         reject(error);
       })
   });
