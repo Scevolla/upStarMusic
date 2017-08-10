@@ -1,7 +1,7 @@
 import assignIn from 'lodash.assignin';
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { Range } from '../filters';
+import { Range } from '../filters/Range.js';
 import * as actions from '../../actions/actions.js';
 
 class ArtistFilter extends Component {
