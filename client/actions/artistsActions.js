@@ -46,16 +46,16 @@ export const findArtist = (id) => (dispatch) =>
 
 export const createArtist = (oProps) => (dispatch) =>
   queries.queryCreateArtist(oProps)
-    .then(oArtist => {
-      hashHistory.push(`artists/${artist._id}`);
+    .then(id => {
+      hashHistory.push(`artists/${id}`);
     })
     .catch(error => {
       console.log('createArtist actionCreator error: ', error);
       dispatch({ type: CREATE_ERROR, payload: error });
     });
 
-export const editArtist = (id, props) => (dispatch) =>
-  queries.queryEditArtist(id, props)
+export const editArtist = (id, oProps) => (dispatch) =>
+  queries.queryEditArtist(id, oProps)
     .then(() => {
       hashHistory.push(`artists/${id}`);
     })

@@ -20,10 +20,17 @@ var artists = [];
 for (var i = 0; i < nCount; ++i) {
     artists.push(Artist(i));
 }
-const sArtists = JSON.stringify(artists, null, 2);
+const sArtists = JSON.stringify(artists);
 fs.writeFile(path.join(__dirname, './../server/database/data.json'), sArtists, function(err) {
     if(err) {
         return console.log(err);
     }
-    console.log("The data was saved!");
+    console.log("Artists was saved!");
+});
+const sNextArtistID = JSON.stringify(artists.length);
+fs.writeFile(path.join(__dirname, './../server/database/nextArtistID.json'), sNextArtistID, function(err) {
+    if(err) {
+        return console.log(err);
+    }
+    console.log("NextArtistID was saved!");
 });

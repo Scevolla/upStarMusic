@@ -13,13 +13,23 @@ router.post('/api/artists', function(req, res) {
 });
 
 router.put('/api/artists', function(req, res) {
-  feedbackData.unshift(req.body);
-  fs.writeFile('app/data/feedback.json', JSON.stringify(feedbackData), 'utf8', function(err) {
-    if (err) {
+  var aData = req.app.get('aData');
+  var nNextArtistID = req.app.get('nNextArtistID');
+  const oArtist = createArtist(req.body, nNextArtistID++);
+  aData.push(oArtist);
+  fs.writeFile('server/database/data.json', JSON.stringify(aData), 'utf8', function(err) {
+    if (err) { 
       console.log(err);
+    } else {
+      fs.writeFile('server/database/nextArtistID.json', JSON.stringify(nNextArtistID), 'utf8', function(err) {
+        if (err) {
+          console.log(err);
+        } else {
+          res.json(oArtist._id);
+        }
+      });
     }
-  });
-  res.json(feedbackData);
+  });   
 });
 
 function searchArtists(_oFilters, aData) {
@@ -43,19 +53,16 @@ function searchArtists(_oFilters, aData) {
   return aArtists;
 }
 
-// function debugWrite() {
-//   if (arguments.length == 0) {
-//     return;
-//   }
-//   for (var i = 0; i < arguments.length; ++i) {
-//     if (typeof arguments[i] == 'string') {
-//       fs.appendFileSync('log.txt', arguments[i]);
-//     } else {
-//       fs.appendFileSync('log.txt', JSON.stringify(arguments[i], null, 4));
-//     }
-//   }
-
-//   fs.appendFileSync('log.txt', '\r\n\r\n');
-// }
+function createArtist(oProps, id) {
+  const oArtist = assignIn({},
+    oProps,
+    {
+      _id: parseInt(id),
+      age: parseInt(oProps.age) || 20,
+      yearsActive: parseInt(oProps.yearsActive) || 5
+    }
+  );
+  return oArtist;
+}
 
 module.exports = router;
