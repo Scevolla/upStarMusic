@@ -5,9 +5,6 @@ import Paginator from './Paginator';
 import * as actions from '../../actions/actions.js';
 
 class ArtistIndex extends Component {
-  // componentDidMount() {
-  //   this.props.searchArtists();
-  // }
 
   onChangeSelection(_id) {
     if (this.props.selection.indexOf(_id) !== -1) {

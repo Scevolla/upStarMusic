@@ -15,6 +15,27 @@ export const queryFilterRanges = () => {
   });
 };
 
+export const queryChangeRetired = (aIDs, bSetRetired) => {
+  return new Promise((resolve, reject) => {
+    fetch('/api/artists?retired=' + (bSetRetired ? 'on' : 'off'), {
+      method: 'POST',
+      body: JSON.stringify(aIDs),
+      headers: {
+        'Content-Type': 'application/json'
+      },
+    })
+      .then(checkStatus)
+      .then(parseJSON)
+      .then(function(data) {
+        console.log('queryChangeRetired succeeded with JSON response', data);
+        resolve(data);
+      }).catch(function(error) {
+        console.log('queryChangeRetired failed: ', error);
+        reject(error);
+      })
+  });
+};
+
 export const querySearchArtists = (oFilters) => {
   return new Promise((resolve, reject) => {
     fetch('/api/artists', {

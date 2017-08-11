@@ -8,8 +8,20 @@ router.use(bodyParser.json());
 router.use(bodyParser.urlencoded({ extended: false }));
 
 router.post('/api/artists', function(req, res) {
-  var aArtists = searchArtists(req.body, req.app.get('aData')); 
-  res.json(aArtists);
+  aData = req.app.get('aData');
+  if (req.query.retired) {
+    setRetired(aData, req.body, req.query.retired == 'on' ? true : false);
+    fs.writeFile('server/database/data.json', JSON.stringify(aData), 'utf8', function(err) {
+      if (err) { 
+        console.log(err);
+      } else {
+        res.json('');
+      }
+    });
+  } else {
+    var aArtists = searchArtists(req.body, aData); 
+    res.json(aArtists);
+  }  
 });
 
 router.put('/api/artists', function(req, res) {
@@ -63,6 +75,11 @@ function createArtist(oProps, id) {
     }
   );
   return oArtist;
+}
+
+function setRetired(aData, aIDs, bRetired) {
+  aData.filter(a => aIDs.indexOf(a._id) !== -1)
+    .forEach(a => a.retired = bRetired);
 }
 
 module.exports = router;

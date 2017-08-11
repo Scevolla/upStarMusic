@@ -22,13 +22,21 @@ export const showArtistsPrevPage = () => {
   return { type: ARTISTS_PREV_PAGE };
 };
 
-export const changeRetired = (aIDs, bSetRetired) => (dispatch) =>
-  ChangeRetiredProxy(aIDs, bSetRetired)
-    .then(() => dispatch({ type: RESET_SELECTION }));
+export const changeRetired = (aIDs, bSetRetired) => (dispatch, getState) =>
+  queries.queryChangeRetired(aIDs, bSetRetired)
+    .then(() =>
+      dispatch({ type: RESET_SELECTION })
+    )
+    .then(() =>
+      dispatch(searchArtists(getState().filterForm))
+    )
+    .catch(error => {
+      console.log('changeRetired actionCreator error: ', error);
+    });
 
 export const searchArtists = (oFilters) => (dispatch) =>
   queries.querySearchArtists(oFilters)
-    .then((result = []) => 
+    .then((result = []) =>
       dispatch({ type: SEARCH_ARTISTS, payload: result })
     )
     .catch(error => {
