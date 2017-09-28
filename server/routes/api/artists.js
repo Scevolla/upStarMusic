@@ -1,51 +1,49 @@
-var express = require('express');
-var router = express.Router();
-var bodyParser = require('body-parser');
-var fs = require('fs');
-var assignIn = require('lodash.assignin');
+const express    = require('express');
+const router     = express.Router();
+const bodyParser = require('body-parser');
+const assignIn   = require('lodash.assignin');
 
 router.use(bodyParser.json());
 router.use(bodyParser.urlencoded({ extended: false }));
 
 router.post('/api/artists', function(req, res) {
-  aData = req.app.get('aData');
+  const db = req.app.get('db');
   if (req.query.retired) {
-    setRetired(aData, req.body, req.query.retired == 'on' ? true : false);
-    fs.writeFile('server/database/data.json', JSON.stringify(aData), 'utf8', function(err) {
-      if (err) { 
-        console.log(err);
-      } else {
-        res.json('');
-      }
+    changeRetired(db, req.body, req.query.retired == 'on' ? true : false)
+    .then(() => res.json(''))
+    .catch((err) => {
+      console.log(err);
+      res.json({err: 'An error occured while changing retired'});
     });
   } else {
-    var aArtists = searchArtists(req.body, aData); 
-    res.json(aArtists);
+    searchArtists(db, req.body)
+    .then((aArtists) => res.json(aArtists))
+    .catch((err) => {
+      console.log(err);
+      res.json({err: 'An error occured while searching artists'});
+    });
   }  
 });
 
 router.put('/api/artists', function(req, res) {
-  var aData = req.app.get('aData');
-  var nNextArtistID = req.app.get('nNextArtistID');
-  const oArtist = createArtist(req.body, nNextArtistID++);
-  aData.push(oArtist);
-  fs.writeFile('server/database/data.json', JSON.stringify(aData), 'utf8', function(err) {
-    if (err) { 
+  const db = req.app.get('db');
+  db.collection('artists').find().sort({_id: -1}).limit(1).toArray()
+  .then((aArtists) => aArtists[0]._id)
+  .then((nID) => {
+    const oArtist = createArtist(req.body, ++nID);
+    return db.collection('artists').insertOne(oArtist);
+  })
+  .then((oResult) => res.json(oResult.insertedId))
+  .catch((err) => {
       console.log(err);
-    } else {
-      fs.writeFile('server/database/nextArtistID.json', JSON.stringify(nNextArtistID), 'utf8', function(err) {
-        if (err) {
-          console.log(err);
-        } else {
-          res.json(oArtist._id);
-        }
-      });
-    }
-  });   
+      res.json({err: 'An error occured while inserting new artist'});
+    });
 });
 
-function searchArtists(_oFilters, aData) {
-  const LIMIT = 50;
+/////////////////// FUNCTIONS ///////////////////////
+
+function searchArtists(db, _oFilters) {
+  const nLIMIT = 50;
   const oFilters = assignIn({
       age: { min: 0, max: 100 },
       yearsActive: { min: 0, max: 100 },
@@ -53,16 +51,28 @@ function searchArtists(_oFilters, aData) {
       sort: 'name'
   }, _oFilters);
 
-  var aArtists = aData;
-  aArtists = aArtists.filter(a => a.name.toLowerCase().indexOf(oFilters.name.toLowerCase()) !== -1);
-  aArtists = aArtists.filter(a => a.age >= oFilters.age.min && a.age <= oFilters.age.max);
-  aArtists = aArtists.filter(a => a.yearsActive >= oFilters.yearsActive.min && a.yearsActive <= oFilters.yearsActive.max);
-  aArtists = aArtists.sort((a, b) => {
-    return a[oFilters.sort] >= b[oFilters.sort] ? 1 : -1;
-  });
-  aArtists.splice(LIMIT, Number.MAX_VALUE);
+  const oFindFilters = {
+    'age': {$gte: oFilters.age.min, $lte: oFilters.age.max},
+    'yearsActive': {$gte: oFilters.yearsActive.min, $lte: oFilters.yearsActive.max},
+    'name': new RegExp(oFilters.name, 'i')
+  };
 
-  return aArtists;
+  return new Promise((resolve, reject) => {
+    db.collection('artists').find(oFindFilters)
+    .sort({[oFilters.sort]: 1})
+    .limit(nLIMIT)
+    .toArray((err, aArtists) => { err ? reject(err) : resolve(aArtists) });
+  });
+}
+
+function changeRetired(db, aIDs, bRetired) {
+  return new Promise(function(resolve, reject) {
+    db.collection('artists').updateMany(
+      {_id: {$in: aIDs}}, 
+      {$set: {'retired': bRetired}}, 
+      (err) => { err ? reject(err) : resolve() }
+    );
+  });
 }
 
 function createArtist(oProps, id) {
@@ -75,11 +85,6 @@ function createArtist(oProps, id) {
     }
   );
   return oArtist;
-}
-
-function setRetired(aData, aIDs, bRetired) {
-  aData.filter(a => aIDs.indexOf(a._id) !== -1)
-    .forEach(a => a.retired = bRetired);
 }
 
 module.exports = router;

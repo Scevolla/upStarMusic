@@ -15,36 +15,28 @@ global.debugWrite = function() {
   fs.appendFileSync('log.txt', '\r\n\r\n');
 }
 
-const fs = require('fs');
-const express = require('express');
-const path = require('path');
-const app = express();
-var dataFile = require('./database/data.json');
-var nNextArtistID = require('./database/nextArtistID.json');
+const fs          = require('fs');
+const express     = require('express');
+const path        = require('path');
+const app         = express();
+const mongoClient = require('mongodb').MongoClient;
+const dbConfig    = require('./config/db');
 
-app.set('port', process.env.PORT || 3050);
-app.set('aData', dataFile);
-app.set('nNextArtistID', parseInt(nNextArtistID) || dataFile.length);
+mongoClient.connect(dbConfig.url, (err, database) => {
+  if (err) {
+    console.log(err);
+  }
 
-app.use(express.static(path.join(__dirname, 'public')));
-app.use(require('./routes/api/'));
-app.use(require('./routes/api/filter-ranges.js'));
-app.use(require('./routes/api/artists.js'));
-app.use(require('./routes/api/artists.id.js'));
+  app.set('port', process.env.PORT || 3050);
+  app.set('db', database);
 
-// if (process.env.NODE_ENV !== 'production') {
-//   console.log('Using webpack-dev-middleware');
-//   const webpackMiddleware = require('webpack-dev-middleware');
-//   const webpack = require('webpack');
-//   const webpackConfig = require('../webpack.config.js');
-//   app.use(webpackMiddleware(webpack(webpackConfig)));
-// } else {
-//   app.use(express.static(path.join(__dirname, 'public')));
-//   app.get('*', (req, res) => {
-//     res.sendFile(path.join(__dirname, 'public/index.html'));
-//   });
-// }
+  app.use(express.static(path.join(__dirname, 'public')));
+  app.use(require('./routes/api/'));
+  app.use(require('./routes/api/filter-ranges.js'));
+  app.use(require('./routes/api/artists.js'));
+  app.use(require('./routes/api/artists.id.js'));
 
-var server = app.listen(app.get('port'), function() {
-  console.log('Listening on port ' + app.get('port'));
+  app.listen(app.get('port'), function() {
+    console.log('Listening on port ' + app.get('port'));
+  });
 });

@@ -1,47 +1,52 @@
-var express = require('express');
-var router = express.Router();
-var bodyParser = require('body-parser');
-var fs = require('fs');
-var assignIn = require('lodash.assignin');
+const express    = require('express');
+const router     = express.Router();
+const bodyParser = require('body-parser');
+const assignIn   = require('lodash.assignin');
+
+router.use(bodyParser.json());
+router.use(bodyParser.urlencoded({ extended: false }));
 
 router.get('/api/artists/:id', function(req, res) {
-  const aData = req.app.get('aData');
-  const id = parseInt(req.params.id);
-  const oArtist = aData.find(a => a._id === id);
-  res.json(oArtist);
+  const db = req.app.get('db');
+  const nID = parseInt(req.params.id);
+  db.collection('artists').find({_id: nID}).toArray(function(err, aArtists) {
+    if (err) {
+      console.log(err);
+      res.json({err: 'An error occured while searching artist'});
+    } else {
+      res.json(aArtists[0]);
+    }
+  });
 });
 
 router.delete('/api/artists/:id', function(req, res) {
-  const aData = req.app.get('aData');
-  const id = parseInt(req.params.id);
-  aData.forEach((oArtist, index) => {
-    if(oArtist && oArtist._id == id) {
-      aData.splice(index, 1);
-    }
-  });
-  fs.writeFile('server/database/data.json', JSON.stringify(aData), 'utf8', function(err) {
-    if (err) { 
+  const db = req.app.get('db');
+  const nID = parseInt(req.params.id);
+  db.collection('artists').deleteOne({_id: nID}, function(err) {
+    if (err) {
       console.log(err);
-    }
-    else {
+      res.json({err: 'An error occured while deleting artist'});
+    } else {
       res.json('deleted');
     }
   });
 });
 
-router.use(bodyParser.json());
-router.use(bodyParser.urlencoded({ extended: false }));
-
 router.put('/api/artists/:id', function(req, res) {
-  const aData = req.app.get('aData');
-  const id = parseInt(req.params.id);
-  const oArtist = aData.find(a => a._id == id);
-  assignIn(oArtist, req.body);
-  fs.writeFile('server/database/data.json', JSON.stringify(aData), 'utf8', function(err) {
-    if (err) { 
-      console.log(err);
+  const db = req.app.get('db');
+  const nID = parseInt(req.params.id);
+  const oNewValues = assignIn({},
+    req.body,
+    {
+      age: parseInt(req.body.age) || 20,
+      yearsActive: parseInt(req.body.yearsActive) || 5
     }
-    else {
+  );
+  db.collection('artists').updateOne({_id: nID}, oNewValues, function(err) {
+    if (err) {
+      console.log(err);
+      res.json({err: 'An error occured while updating artist'});
+    } else {
       res.json('edited');
     }
   });

@@ -1,23 +1,35 @@
-var express = require('express');
-var router = express.Router();
-var utils = rootRequire('../helpers/utils.js');
+const express = require('express');
+const router = express.Router();
 
 router.get('/api/filter-ranges', function(req, res) {
-  var aData = req.app.get('aData');
-  res.json(getFilterRanges(aData));
+  var db = req.app.get('db');
+  getFilterRanges(db)
+  .then((oRanges) => res.json(oRanges))
+  .catch((err) => {
+    console.log(err);
+    res.json({err: 'An error occured while getting form filter ranges'});
+  });
 });
 
-function getFilterRanges(aData) {
-  return {
-    limitAge: {
-      max: utils.maxPropOfArray(aData, 'age'),
-      min: utils.minPropOfArray(aData, 'age'),
-    },
-    limitYearsActive: {
-      max: utils.maxPropOfArray(aData, 'yearsActive'),
-      min: utils.minPropOfArray(aData, 'yearsActive'),
-    }
+function getFilterRanges(db) {
+  var oRanges = {
+    limitAge: {max: 100, min: 0},
+    limitYearsActive: {max: 100, min: 0}
   };
+  return new Promise(function(resolve, reject) {
+    db.collection('artists').find().sort({'age': -1}).limit(1).toArray()
+    .then((aArtists) => oRanges.limitAge.max = aArtists[0].age)
+    .then(() => db.collection('artists').find().sort({'age': 1}).limit(1).toArray())
+    .then((aArtists) => oRanges.limitAge.min = aArtists[0].age)
+    .then(() => db.collection('artists').find().sort({'yearsActive': -1}).limit(1).toArray())
+    .then((aArtists) => oRanges.limitYearsActive.max = aArtists[0].yearsActive)
+    .then(() => db.collection('artists').find().sort({'yearsActive': 1}).limit(1).toArray())
+    .then((aArtists) => { 
+      oRanges.limitYearsActive.min = aArtists[0].yearsActive;
+      resolve(oRanges);
+    })
+    .catch((err) => reject(err));
+  })
 }
 
 module.exports = router;
