@@ -12,10 +12,10 @@ class Header extends Component {
   render() {
     return (
       <div className="row">
-        <nav>
-          <div className="nav-wrapper">
-            <div className="col s12">
-              <a href="#" className="brand-logo">UpStar Music</a>
+        <div className="col s12">
+          <nav>
+            <div className="nav-wrapper">
+              <a href="#" className="brand-logo" style={{paddingLeft: '0.75rem'}}>UpStar Music</a>
               <ul id="nav-mobile" className="right hide-on-med-and-down">
                 <li>
                   <a onClick={this.redirectToRandomArtist.bind(this)}>
@@ -29,8 +29,8 @@ class Header extends Component {
                 </li>
               </ul>
             </div>
-          </div>
-        </nav>
+          </nav>
+        </div>
       </div>
     );
   }

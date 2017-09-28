@@ -59,14 +59,29 @@ class ArtistIndex extends Component {
     if (this.props.artists.all.length) { return; }
 
     return (
-      <div className="center-align">
+      <div className="center-align collection" style={{marginTop: 0}}>
         <h5>No records found!</h5>
         <div>Try searching again</div>
       </div>
     );
   }
 
+  renderCollection() {
+    if (!this.props.artists.all.length) { return; }
+    const { offset, displayCount } = this.props.artists;
+    return (
+      <ul className="collection">
+        {
+          this.props.artists.all
+            .filter((a, i) => i >= offset && i < (offset + displayCount))
+            .map(this.renderList, this)
+        }          
+      </ul>
+    );
+  }
+
   renderRetire() {
+    if (!this.props.artists.all.length) { return; }
     const className = 'btn' + (this.props.selection.length ? '' : ' disabled');
 
     return (
@@ -89,19 +104,11 @@ class ArtistIndex extends Component {
   }
 
   render() {
-    const { offset, displayCount } = this.props.artists;
     return (
       <div>
         {this.renderRetire()}
-        <ul className="collection">
-          {
-            this.props.artists.all
-              .filter((a, i) => i >= offset && i < (offset + displayCount))
-              .map(this.renderList, this)
-          }
-          {this.renderEmptyCollection()}
-        </ul>
-
+        {this.renderEmptyCollection()}
+        {this.renderCollection()}        
         {this.renderPaginator()}
       </div>
     );

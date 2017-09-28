@@ -26,7 +26,7 @@ class ArtistFilter extends Component {
     const { filterForm } = this.props;
 
     return (
-      <div className="card blue-grey darken-1 row">
+      <div className="card blue-grey darken-1" style={{marginTop: 0}}>
         <div className="card-content white-text">
           <form name='filterForm' onSubmit={this.handleSubmit.bind(this)}>
             <div className="center-align card-title">
