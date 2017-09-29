@@ -1,4 +1,5 @@
 import * as queries from './queries.js';
+import 'whatwg-fetch';
 import {
   FILTER_CHANGED,
   SET_FILTER_RANGES
@@ -10,10 +11,11 @@ export const filterChanged = (values) => {
 };
 
 export const setFilterRanges = () => (dispatch) =>
-  queries.queryFilterRanges()
-    .then(result => {
-      return dispatch({ type: SET_FILTER_RANGES, payload: result })
-    })
-    .catch(error => {
-      console.log('setFilterRanges actionCreator error: ', error);
-    });
+  fetch('/api/filter-ranges')
+  .then(queries.checkStatus)
+  .then(queries.parseJSON)
+  .then(queries.checkCustomErrors)
+  .then((oFilterFanges) => dispatch({ type: SET_FILTER_RANGES, payload: oFilterFanges }))
+  .catch((error) => {
+    console.log('setFilterRanges actionCreator error: ', error);
+  });
